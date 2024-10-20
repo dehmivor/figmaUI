@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/figmaUI/static/css/main.9a5c6096.css",
-    "main.js": "/figmaUI/static/js/main.b6eb99bf.js",
+    "main.js": "/figmaUI/static/js/main.f625a856.js",
     "static/js/453.3ae93e69.chunk.js": "/figmaUI/static/js/453.3ae93e69.chunk.js",
     "index.html": "/figmaUI/index.html",
     "main.9a5c6096.css.map": "/figmaUI/static/css/main.9a5c6096.css.map",
-    "main.b6eb99bf.js.map": "/figmaUI/static/js/main.b6eb99bf.js.map",
+    "main.f625a856.js.map": "/figmaUI/static/js/main.f625a856.js.map",
     "453.3ae93e69.chunk.js.map": "/figmaUI/static/js/453.3ae93e69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9a5c6096.css",
-    "static/js/main.b6eb99bf.js"
+    "static/js/main.f625a856.js"
   ]
 }
