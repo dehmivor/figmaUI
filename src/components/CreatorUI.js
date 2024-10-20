@@ -12,7 +12,13 @@ import { BsBookmark } from "react-icons/bs"; // For bookmark icon
 
 const CreatorUI = () => {
   return (
-    <div className="d-flex justify-content-center mt-4">
+    <div
+      style={{
+        backgroundColor: "#f0ecf5",
+        minHeight: "100vh",
+        padding: "20px",
+      }}
+    >
       <div className="custom-width">
         {/* First Row: Creators you know */}
         <Row className="mb-3">

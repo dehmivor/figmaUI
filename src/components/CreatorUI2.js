@@ -17,9 +17,14 @@ const CreatorUI2 = () => {
     ticketCount > 0 && setTicketCount(ticketCount - 1);
 
   return (
-    <div className="container mt-4" style={{ maxWidth: "500px" }}>
+    <div
+      style={{
+        backgroundColor: "#f0ecf5",
+        padding: "20px",
+      }}
+    >
       {/* Event Card */}
-      <Card className="mb-3 p-3" style={{ borderRadius: "16px" }}>
+      <Card className="mb-3" style={{ borderRadius: "16px" }}>
         <Row className="align-items-center">
           <Col xs={3}>
             <Image src="wave.jpg" rounded className="w-100" />

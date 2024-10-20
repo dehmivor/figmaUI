@@ -21,7 +21,13 @@ const ReadingTaskUI = () => {
   ];
 
   return (
-    <div className="container mt-4" style={{ maxWidth: "500px" }}>
+    <div
+      style={{
+        backgroundColor: "#f0ecf5",
+        minHeight: "100vh",
+        padding: "20px",
+      }}
+    >
       {/* Header Task */}
       <Card
         className="mb-3 p-3"
