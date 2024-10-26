@@ -27,28 +27,28 @@ const CreatorUI = () => {
               <span className="me-3">Creator you know</span>
               <div className="d-flex">
                 <Image
-                  src="person1.jpg"
+                  src={`${process.env.PUBLIC_URL}/person1.jpg`}
                   roundedCircle
                   width="40"
                   height="40"
                   className="me-1"
                 />
                 <Image
-                  src="person2.jpg"
+                  src={`${process.env.PUBLIC_URL}/person1.jpg`}
                   roundedCircle
                   width="40"
                   height="40"
                   className="me-1"
                 />
                 <Image
-                  src="person3.jpg"
+                  src={`${process.env.PUBLIC_URL}/person1.jpg`}
                   roundedCircle
                   width="40"
                   height="40"
                   className="me-1"
                 />
                 <Image
-                  src="person4.jpg"
+                  src={`${process.env.PUBLIC_URL}/person1.jpg`}
                   roundedCircle
                   width="40"
                   height="40"

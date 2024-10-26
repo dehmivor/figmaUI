@@ -16,10 +16,26 @@ const CreatorUI1 = () => {
       <header className="text-center my-4">
         <h2>Creator you know</h2>
         <div className="avatars d-flex justify-content-center">
-          <Image src="person1.jpg" alt=" 1" className="avatar" />
-          <Image src="person1.jpg" alt=" 2" className="avatar" />
-          <Image src="person1.jpg" alt=" 3" className="avatar" />
-          <Image src="person1.jpg" alt=" 4" className="avatar" />
+          <Image
+            src={`${process.env.PUBLIC_URL}/person1.jpg`}
+            alt=" 1"
+            className="avatar"
+          />
+          <Image
+            src={`${process.env.PUBLIC_URL}/person1.jpg`}
+            alt=" 2"
+            className="avatar"
+          />
+          <Image
+            src={`${process.env.PUBLIC_URL}/person1.jpg`}
+            alt=" 3"
+            className="avatar"
+          />
+          <Image
+            src={`${process.env.PUBLIC_URL}/person1.jpg`}
+            alt=" 4"
+            className="avatar"
+          />
         </div>
       </header>
 
@@ -77,7 +93,11 @@ const CreatorUI1 = () => {
 
       {/* Post Section */}
       <Card className="mb-4">
-        <Card.Img variant="top" src="creator.jpg" alt="Creator Image" />
+        <Card.Img
+          variant="top"
+          src={`${process.env.PUBLIC_URL}/person1.jpg`}
+          alt="Creator Image"
+        />
         <Card.Body>
           <Card.Text>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -98,7 +118,7 @@ const CreatorUI1 = () => {
       <Card className="mb-4">
         <Row>
           <Col md={4}>
-            <Card.Img variant="top" src="wave-image.jpg" alt="Wave Image" />
+            <Card.Img variant="top" src="/wave.jpg" alt="Wave Image" />
           </Col>
           <Col md={8}>
             <Card.Body>
@@ -115,7 +135,7 @@ const CreatorUI1 = () => {
                   </div>
                   <div className="icon d-flex align-items-center mr-3">
                     <img
-                      src="comment-icon.png"
+                      src={`${process.env.PUBLIC_URL}/person1.jpg`}
                       alt="Comment"
                       className="mr-1"
                     />
