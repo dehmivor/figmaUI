@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Button, Badge } from "react-bootstrap";
-import { BsBookmark, BsStarFill, BsStar } from "react-icons/bs"; // Icons from react-icons
+import { Badge, Card } from "react-bootstrap";
+import { BsBookmark, BsStar, BsStarFill } from "react-icons/bs"; // Icons from react-icons
 
 const ReadingTaskUI2 = () => {
   return (

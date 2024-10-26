@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, Badge } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { BsChevronRight } from "react-icons/bs"; // Chevron Icon for "View More"
 
 const ReadingTaskUI3 = () => {

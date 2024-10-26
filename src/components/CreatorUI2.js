@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Card,
-  Button,
-  Image,
-  Row,
-  Col,
-  InputGroup,
-  FormControl,
-} from "react-bootstrap";
+import { Button, Card, Col, Image, Row } from "react-bootstrap";
 
 const CreatorUI2 = () => {
   const [ticketCount, setTicketCount] = useState(2);
