@@ -201,7 +201,12 @@ function LocationCard({ title, duration, location, host, image }) {
 function EventCard({ title, duration, date, image }) {
   return (
     <Card sx={{ borderRadius: 2, bgcolor: "#b39ddb" }}>
-      <CardMedia component="img" height="100" image={image} alt={title} />
+      <CardMedia
+        component="img"
+        height="100"
+        src={`${process.env.PUBLIC_URL}/wave.jpg`}
+        alt={title}
+      />
       <CardContent>
         <Stack direction="row" spacing={1} alignItems="center">
           <Typography variant="caption" color="textSecondary">
