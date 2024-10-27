@@ -15,10 +15,10 @@ import {
   CardMedia,
   IconButton,
   InputAdornment,
+  Stack,
   TextField,
   Typography,
 } from "@mui/material";
-import Stack from "@mui/material/Stack";
 import React from "react";
 
 // Main App Component
@@ -36,51 +36,36 @@ export default function App() {
       }}
     >
       {/* Header with Avatar Group */}
-      <Card sx={{ borderRadius: 2 }}>
-        <Stack direction="row" spacing={1} alignItems="center">
-          <Typography variant="h6">Creator you know</Typography>
-          <AvatarGroup max={4}>
-            <Avatar
-              alt="User 1"
-              src={`${process.env.PUBLIC_URL}/person1.jpg`}
-            />
-            <Avatar
-              alt="User 2"
-              src={`${process.env.PUBLIC_URL}/person2.jpg`}
-            />
-            <Avatar
-              alt="User 3"
-              src={`${process.env.PUBLIC_URL}/person3.jpg`}
-            />
-            <Avatar
-              alt="User 4"
-              src={`${process.env.PUBLIC_URL}/person4.jpg`}
-            />
-          </AvatarGroup>
-        </Stack>
-      </Card>
+      <Stack direction="row" spacing={1} alignItems="center">
+        <Typography variant="h6">Creator you know</Typography>
+        <AvatarGroup max={4}>
+          <Avatar alt="User 1" src="/user1.jpg" />
+          <Avatar alt="User 2" src="/user2.jpg" />
+          <Avatar alt="User 3" src="/user3.jpg" />
+          <Avatar alt="User 4" src="/user4.jpg" />
+        </AvatarGroup>
+      </Stack>
 
       {/* Search Bar */}
-      <Card sx={{ borderRadius: 2 }}>
-        <TextField
-          placeholder="Search Creator"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
+      <TextField
+        variant="outlined"
+        placeholder="Search Creator"
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <Search />
+            </InputAdornment>
+          ),
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton>
                 <Search />
-              </InputAdornment>
-            ),
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton>
-                  <Search />
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-          fullWidth
-        />
-      </Card>
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
+        fullWidth
+      />
 
       {/* Card for Content */}
       <Card sx={{ borderRadius: 2 }}>
@@ -88,7 +73,7 @@ export default function App() {
           <CardMedia
             component="img"
             sx={{ width: 100, height: 80 }}
-            src={`${process.env.PUBLIC_URL}/wave.jpg`}
+            image="/wave.jpg"
             alt="Constructive and destructive waves"
           />
           <CardContent>
@@ -102,52 +87,38 @@ export default function App() {
       </Card>
 
       {/* Ticket Counter */}
-      <Card sx={{ borderRadius: 2 }}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-        >
-          <Typography>Ticket (Ages 2-12)</Typography>
-          <Box>
-            <IconButton>
-              <Remove />
-            </IconButton>
-            <Typography variant="body1" component="span">
-              2
-            </Typography>
-            <IconButton>
-              <Add />
-            </IconButton>
-          </Box>
-        </Stack>
-      </Card>
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
+        <Typography>Ticket (Ages 2-12)</Typography>
+        <Box>
+          <IconButton>
+            <Remove />
+          </IconButton>
+          <Typography variant="body1" component="span">
+            2
+          </Typography>
+          <IconButton>
+            <Add />
+          </IconButton>
+        </Box>
+      </Stack>
 
       {/* Profile Card */}
-      <Card sx={{ borderRadius: 2 }}>
-        <Stack direction="row" alignItems="center" spacing={2}>
-          <Avatar
-            alt="Jerome Bell"
-            src={`${process.env.PUBLIC_URL}/person5.jpg`}
-          />
-          <Box>
-            <Typography variant="body1">Jerome Bell</Typography>
-            <Typography variant="caption">@whitefish684</Typography>
-          </Box>
-          <Button variant="contained" color="primary">
-            Follow
-          </Button>
-        </Stack>
-      </Card>
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Avatar alt="Jerome Bell" src="/jerome_bell.jpg" />
+        <Box>
+          <Typography variant="body1">Jerome Bell</Typography>
+          <Typography variant="caption">@whitefish684</Typography>
+        </Box>
+        <Button variant="contained" color="primary">
+          Follow
+        </Button>
+      </Stack>
 
       {/* Post Card */}
       <Card variant="outlined" sx={{ borderRadius: 2 }}>
         <CardContent>
           <Stack direction="row" spacing={2}>
-            <Avatar
-              alt="Jerome Bell"
-              src={`${process.env.PUBLIC_URL}/person5.jpg`}
-            />
+            <Avatar alt="Jerome Bell" src="/jerome_bell.jpg" />
             <Box>
               <Typography variant="body2">Jerome Bell</Typography>
               <Typography variant="caption" color="textSecondary">
@@ -178,7 +149,7 @@ export default function App() {
         <CardMedia
           component="img"
           height="100"
-          src={`${process.env.PUBLIC_URL}/wave.jpg`}
+          image="/wave.jpg"
           alt="Event image"
         />
         <CardContent>
@@ -195,19 +166,17 @@ export default function App() {
       </Card>
 
       {/* Footer with Icon Buttons */}
-      <Card sx={{ borderRadius: 2 }}>
-        <Stack direction="row" justifyContent="space-around">
-          <IconButton>
-            <FavoriteBorder /> 816
-          </IconButton>
-          <IconButton>
-            <ChatBubbleOutline /> 877
-          </IconButton>
-          <IconButton>
-            <Share /> 185
-          </IconButton>
-        </Stack>
-      </Card>
+      <Stack direction="row" justifyContent="space-around">
+        <IconButton>
+          <FavoriteBorder /> 816
+        </IconButton>
+        <IconButton>
+          <ChatBubbleOutline /> 877
+        </IconButton>
+        <IconButton>
+          <Share /> 185
+        </IconButton>
+      </Stack>
     </Box>
   );
 }
