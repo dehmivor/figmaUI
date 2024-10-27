@@ -36,9 +36,9 @@ export default function App() {
       }}
     >
       {/* Header with Avatar Group */}
-      <Card sx={{ borderRadius: 2 }}>
+      <Card sx={{ borderRadius: 2, padding: 2 }}>
         <Stack direction="row" spacing={1} alignItems="center">
-          <Typography variant="h6">Creator you know</Typography>
+          <Typography variant="h7">Creator you know</Typography>
           <AvatarGroup max={4}>
             <Avatar
               alt="User 1"
@@ -72,9 +72,7 @@ export default function App() {
             ),
             endAdornment: (
               <InputAdornment position="end">
-                <IconButton>
-                  <Search />
-                </IconButton>
+                <IconButton>></IconButton>
               </InputAdornment>
             ),
           }}

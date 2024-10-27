@@ -16,25 +16,25 @@ function App() {
       sx={{ whiteSpace: "nowrap" }} // Prevent wrapping to a new row
       backgroundColor="#f2f2fc"
     >
-      <Box sx={{ minWidth: 360, padding: 2 }}>
+      <Box sx={{ minWidth: 360, padding: 1 }}>
         <Column1 />
       </Box>
-      <Box sx={{ minWidth: 360, padding: 2 }}>
+      <Box sx={{ minWidth: 360, padding: 1 }}>
         <Column2 />
       </Box>
-      <Box sx={{ minWidth: 360, padding: 2 }}>
+      <Box sx={{ minWidth: 360, padding: 1 }}>
         <Column3 />
       </Box>
-      <Box sx={{ minWidth: 360, padding: 2 }}>
+      <Box sx={{ minWidth: 360, padding: 1 }}>
         <Column4 />
       </Box>
-      <Box sx={{ minWidth: 360, padding: 2 }}>
+      <Box sx={{ minWidth: 360, padding: 1 }}>
         <Column5 />
       </Box>
-      <Box sx={{ minWidth: 360, padding: 2 }}>
+      <Box sx={{ minWidth: 360, padding: 1 }}>
         <Column6 />
       </Box>
-      <Box sx={{ minWidth: 360, padding: 2 }}>
+      <Box sx={{ minWidth: 360, padding: 1 }}>
         <Column7 />
       </Box>
     </Box>
