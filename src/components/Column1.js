@@ -6,6 +6,8 @@ import {
   Search,
   Share,
 } from "@mui/icons-material";
+import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
+
 import {
   Avatar,
   Box,
@@ -38,7 +40,11 @@ export default function App() {
       {/* Header with Avatar Group */}
       <Card sx={{ borderRadius: 2, padding: 2 }}>
         <Stack direction="row" spacing={1} alignItems="center">
-          <Typography variant="h7">Creator you know</Typography>
+          <Typography variant="h7" sx={{ display: "block" }}>
+            {" "}
+            {/* Adjusted */}
+            Creator you know
+          </Typography>
           <AvatarGroup max={4}>
             <Avatar
               alt="User 1"
@@ -61,7 +67,7 @@ export default function App() {
       </Card>
 
       {/* Search Bar */}
-      <Card sx={{ borderRadius: 2 }}>
+      <Card sx={{ borderRadius: 2, padding: 1 }}>
         <TextField
           placeholder="Search Creator"
           InputProps={{
@@ -72,31 +78,80 @@ export default function App() {
             ),
             endAdornment: (
               <InputAdornment position="end">
-                <IconButton>></IconButton>
+                <IconButton>
+                  <ArrowForwardIos fontSize="small" />
+                </IconButton>
               </InputAdornment>
             ),
+            disableUnderline: true,
           }}
-          fullWidth
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                border: "none",
+              },
+              "&:hover fieldset": {
+                border: "none",
+              },
+              "&.Mui-focused fieldset": {
+                border: "none",
+              },
+            },
+          }}
         />
       </Card>
 
       {/* Card for Content */}
-      <Card sx={{ borderRadius: 2 }}>
-        <Stack direction="row">
-          <CardMedia
-            component="img"
-            sx={{ width: 100, height: 80 }}
-            src={`${process.env.PUBLIC_URL}/wave.jpg`}
-            alt="Constructive and destructive waves"
-          />
-          <CardContent>
-            <Typography variant="body1">
-              Constructive and destructive waves
-            </Typography>
-            {/* Star Rating */}
-            <Typography variant="caption">★★☆☆☆</Typography>
-          </CardContent>
-        </Stack>
+      <Card sx={{ borderRadius: 2, display: "flex" }}>
+        <CardContent sx={{ padding: 1 }}>
+          <Typography variant="body1" sx={{ display: "block" }}>
+            {" "}
+            {/* Adjusted */}
+            Constructive and destructive waves
+          </Typography>
+          {/* Star Rating */}
+          <Typography variant="caption" sx={{ display: "block", marginTop: 0 }}>
+            {" "}
+            {/* Adjusted */}
+            ★★☆☆☆
+          </Typography>
+        </CardContent>
+        <CardMedia
+          component="img"
+          sx={{
+            width: "40%",
+            height: 180,
+            objectFit: "cover",
+          }}
+          src={`${process.env.PUBLIC_URL}/wave.jpg`}
+          alt="Constructive and destructive waves"
+        />
+      </Card>
+
+      <Card sx={{ borderRadius: 2, display: "flex", overflow: "hidden" }}>
+        <CardMedia
+          component="img"
+          sx={{
+            width: "50%",
+            height: 80,
+            objectFit: "cover",
+          }}
+          src={`${process.env.PUBLIC_URL}/wave.jpg`}
+          alt="Constructive and destructive waves"
+        />
+        <CardContent sx={{ flexGrow: 1, padding: 1 }}>
+          <Typography
+            variant="body1"
+            noWrap={false}
+            sx={{
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              display: "block",
+            }}
+          >
+            Constructive and destructive waves
+          </Typography>
+        </CardContent>
       </Card>
 
       {/* Ticket Counter */}
@@ -106,13 +161,22 @@ export default function App() {
           alignItems="center"
           justifyContent="space-between"
         >
-          <Typography>Ticket (Ages 2-12)</Typography>
+          <Typography sx={{ display: "block" }}>
+            {" "}
+            {/* Adjusted */}
+            Ticket (Ages 2-12)
+          </Typography>
           <Box>
             <IconButton>
               <Remove />
             </IconButton>
-            <Typography variant="body1" component="span">
-              2
+            <Typography
+              variant="body1"
+              component="span"
+              sx={{ display: "block" }}
+            >
+              {" "}
+              {/* Adjusted */}2
             </Typography>
             <IconButton>
               <Add />
@@ -129,8 +193,16 @@ export default function App() {
             src={`${process.env.PUBLIC_URL}/person5.jpg`}
           />
           <Box>
-            <Typography variant="body1">Jerome Bell</Typography>
-            <Typography variant="caption">@whitefish684</Typography>
+            <Typography variant="body1" sx={{ display: "block" }}>
+              {" "}
+              {/* Adjusted */}
+              Jerome Bell
+            </Typography>
+            <Typography variant="caption" sx={{ display: "block" }}>
+              {" "}
+              {/* Adjusted */}
+              @whitefish684
+            </Typography>
           </Box>
           <Button variant="contained" color="primary">
             Follow
@@ -147,9 +219,18 @@ export default function App() {
               src={`${process.env.PUBLIC_URL}/person5.jpg`}
             />
             <Box>
-              <Typography variant="body2">Jerome Bell</Typography>
-              <Typography variant="caption" color="textSecondary">
-                2 weeks ago
+              <Typography variant="body2" sx={{ display: "block" }}>
+                {" "}
+                {/* Adjusted */}
+                Jerome Bell
+              </Typography>
+              <Typography
+                variant="caption"
+                color="textSecondary"
+                sx={{ display: "block" }}
+              >
+                {" "}
+                {/* Adjusted */}2 weeks ago
               </Typography>
             </Box>
           </Stack>
@@ -180,13 +261,27 @@ export default function App() {
           alt="Event image"
         />
         <CardContent>
-          <Typography variant="caption" color="primary">
+          <Typography
+            variant="caption"
+            color="primary"
+            sx={{ display: "block" }}
+          >
+            {" "}
+            {/* Adjusted */}
             07:00 PM
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" sx={{ display: "block" }}>
+            {" "}
+            {/* Adjusted */}
             Constructive and destructive waves
           </Typography>
-          <Typography variant="caption" color="textSecondary">
+          <Typography
+            variant="caption"
+            color="textSecondary"
+            sx={{ display: "block" }}
+          >
+            {" "}
+            {/* Adjusted */}
             October 30, 2023
           </Typography>
         </CardContent>
