@@ -1,18 +1,16 @@
-import React from "react";
+import { AccessTime, BookmarkBorder, Folder } from "@mui/icons-material";
 import {
-  Avatar,
   Box,
   Button,
   Card,
   CardContent,
   CardMedia,
   Chip,
-  Divider,
   IconButton,
   Stack,
   Typography,
 } from "@mui/material";
-import { AccessTime, Folder, BookmarkBorder } from "@mui/icons-material";
+import React from "react";
 
 // Main Component
 export default function Column2() {
@@ -58,7 +56,7 @@ export default function Column2() {
       <ImageCard
         title="Constructive and destructive waves"
         time="07:00 PM"
-        image="/wave.jpg"
+        src={`${process.env.PUBLIC_URL}/wave.jpg`}
       />
     </Box>
   );
@@ -136,7 +134,12 @@ function EventCard({ title, time, description }) {
 function ImageCard({ title, time, image }) {
   return (
     <Card sx={{ borderRadius: 2, position: "relative" }}>
-      <CardMedia component="img" height="140" image={image} alt={title} />
+      <CardMedia
+        component="img"
+        height="140"
+        src={`${process.env.PUBLIC_URL}/wave.jpg`}
+        alt={title}
+      />
       <CardContent>
         <Stack direction="row" spacing={1} alignItems="center">
           <AccessTime fontSize="small" color="secondary" />

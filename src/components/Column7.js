@@ -17,12 +17,13 @@ function Column7() {
   return (
     <Box
       sx={{
-        display: "grid",
+        width: 300,
+        bgcolor: "#f2f2fc",
+        p: 2,
+        borderRadius: 3,
+        display: "flex",
+        flexDirection: "column",
         gap: 2,
-        gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-        padding: 2,
-        maxWidth: 800,
-        margin: "0 auto",
       }}
     >
       {/* Card 5 */}

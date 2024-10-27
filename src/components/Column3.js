@@ -17,12 +17,13 @@ function Column3() {
   return (
     <Box
       sx={{
+        width: 300,
+        bgcolor: "#f2f2fc",
+        p: 2,
+        borderRadius: 3,
         display: "flex",
         flexDirection: "column",
         gap: 2,
-        padding: 2,
-        maxWidth: 400,
-        margin: "0 auto",
       }}
     >
       {/* Card đầu tiên với Avatar và thông tin người dùng */}

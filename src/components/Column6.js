@@ -17,12 +17,13 @@ function Column6() {
   return (
     <Box
       sx={{
-        display: "grid",
+        width: 300,
+        bgcolor: "#f2f2fc",
+        p: 2,
+        borderRadius: 3,
+        display: "flex",
+        flexDirection: "column",
         gap: 2,
-        gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-        padding: 2,
-        maxWidth: 800,
-        margin: "0 auto",
       }}
     >
       {/* Card 3 */}
@@ -30,7 +31,7 @@ function Column6() {
         <CardContent sx={{ display: "flex", alignItems: "center", gap: 2 }}>
           <Avatar
             alt="Jerome Bell"
-            src={`${process.env.PUBLIC_URL}/person5.jpg`}
+            src={`${process.env.PUBLIC_URL}/wave.jpg`}
           />
           <Box>
             <Typography variant="h6">Jerome Bell</Typography>
