@@ -14,6 +14,7 @@ function App() {
       display="flex" // Arrange items in a horizontal row
       overflow="auto" // Enable horizontal scrolling
       sx={{ whiteSpace: "nowrap" }} // Prevent wrapping to a new row
+      backgroundColor="#f2f2fc"
     >
       <Box sx={{ minWidth: 360, padding: 2 }}>
         <Column1 />

@@ -1,17 +1,6 @@
 // App.js
+import { Avatar, Box, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardActions,
-  Button,
-  Avatar,
-  Typography,
-  Box,
-  IconButton,
-  Divider,
-} from "@mui/material";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 function Column6() {
   return (
