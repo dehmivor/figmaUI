@@ -1,36 +1,194 @@
-import CreatorUI from "./components/CreatorUI";
-import "bootstrap/dist/css/bootstrap.min.css";
-import CreatorUI2 from "./components/CreatorUI2";
-import ReadingTaskUI from "./components/ReadingTaskUI";
-import ReadingTask from "./components/ReadingTask";
-import ReadingTaskUI2 from "./components/ReadingTaskUI2";
-import ReadingTaskUI3 from "./components/ReadingTaskUI3";
-import CreatorUI1 from "./components/CreatorUI1";
-import Column1 from "./components/Column1";
-import Column2 from "./components/Column2";
-import Column3 from "./components/Column3";
-import Column4 from "./components/Column4";
-import Column5 from "./components/Column5";
-import Column6 from "./components/Column6";
+import React from "react";
+import {
+  Avatar,
+  Badge,
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  IconButton,
+  InputAdornment,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
+import {
+  Search,
+  Add,
+  Remove,
+  FavoriteBorder,
+  ChatBubbleOutline,
+  Share,
+} from "@mui/icons-material";
 
-function App() {
+// Main App Component
+export default function App() {
   return (
-    <>
-      <Column1 />
-      <Column2 />
-      <Column3 />
-      <Column4 />
-      <Column5 />
-      <Column6 />
-      <CreatorUI />
-      <CreatorUI1 />
-      <CreatorUI2 />
-      <ReadingTaskUI />
-      <ReadingTask />
-      <ReadingTaskUI2 />
-      <ReadingTaskUI3 />
-    </>
+    <Box
+      sx={{
+        width: 300,
+        bgcolor: "#f2f2fc",
+        p: 2,
+        borderRadius: 3,
+        display: "flex",
+        flexDirection: "column",
+        gap: 2,
+      }}
+    >
+      {/* Header with Avatar Group */}
+      <Stack direction="row" spacing={1} alignItems="center">
+        <Typography variant="h6">Creator you know</Typography>
+        <AvatarGroup max={4}>
+          <Avatar alt="User 1" src="/user1.jpg" />
+          <Avatar alt="User 2" src="/user2.jpg" />
+          <Avatar alt="User 3" src="/user3.jpg" />
+          <Avatar alt="User 4" src="/user4.jpg" />
+        </AvatarGroup>
+      </Stack>
+
+      {/* Search Bar */}
+      <TextField
+        variant="outlined"
+        placeholder="Search Creator"
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <Search />
+            </InputAdornment>
+          ),
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton>
+                <Search />
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
+        fullWidth
+      />
+
+      {/* Card for Content */}
+      <Card sx={{ borderRadius: 2 }}>
+        <Stack direction="row">
+          <CardMedia
+            component="img"
+            sx={{ width: 100, height: 80 }}
+            image="/wave.jpg"
+            alt="Constructive and destructive waves"
+          />
+          <CardContent>
+            <Typography variant="body1">
+              Constructive and destructive waves
+            </Typography>
+            {/* Star Rating */}
+            <Typography variant="caption">★★☆☆☆</Typography>
+          </CardContent>
+        </Stack>
+      </Card>
+
+      {/* Ticket Counter */}
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
+        <Typography>Ticket (Ages 2-12)</Typography>
+        <Box>
+          <IconButton>
+            <Remove />
+          </IconButton>
+          <Typography variant="body1" component="span">
+            2
+          </Typography>
+          <IconButton>
+            <Add />
+          </IconButton>
+        </Box>
+      </Stack>
+
+      {/* Profile Card */}
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Avatar alt="Jerome Bell" src="/jerome_bell.jpg" />
+        <Box>
+          <Typography variant="body1">Jerome Bell</Typography>
+          <Typography variant="caption">@whitefish684</Typography>
+        </Box>
+        <Button variant="contained" color="primary">
+          Follow
+        </Button>
+      </Stack>
+
+      {/* Post Card */}
+      <Card variant="outlined" sx={{ borderRadius: 2 }}>
+        <CardContent>
+          <Stack direction="row" spacing={2}>
+            <Avatar alt="Jerome Bell" src="/jerome_bell.jpg" />
+            <Box>
+              <Typography variant="body2">Jerome Bell</Typography>
+              <Typography variant="caption" color="textSecondary">
+                2 weeks ago
+              </Typography>
+            </Box>
+          </Stack>
+          <Typography variant="body2" sx={{ mt: 1 }}>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit...
+          </Typography>
+        </CardContent>
+        <Stack direction="row" justifyContent="space-around" sx={{ p: 1 }}>
+          <IconButton>
+            <FavoriteBorder /> 816
+          </IconButton>
+          <IconButton>
+            <ChatBubbleOutline /> 877
+          </IconButton>
+          <IconButton>
+            <Share /> 185
+          </IconButton>
+        </Stack>
+      </Card>
+
+      {/* Event Card */}
+      <Card sx={{ borderRadius: 2 }}>
+        <CardMedia
+          component="img"
+          height="100"
+          image="/wave.jpg"
+          alt="Event image"
+        />
+        <CardContent>
+          <Typography variant="caption" color="primary">
+            07:00 PM
+          </Typography>
+          <Typography variant="body2">
+            Constructive and destructive waves
+          </Typography>
+          <Typography variant="caption" color="textSecondary">
+            October 30, 2023
+          </Typography>
+        </CardContent>
+      </Card>
+
+      {/* Footer with Icon Buttons */}
+      <Stack direction="row" justifyContent="space-around">
+        <IconButton>
+          <FavoriteBorder /> 816
+        </IconButton>
+        <IconButton>
+          <ChatBubbleOutline /> 877
+        </IconButton>
+        <IconButton>
+          <Share /> 185
+        </IconButton>
+      </Stack>
+    </Box>
   );
 }
 
-export default App;
+// Custom Avatar Group Component
+function AvatarGroup({ children, max }) {
+  const visibleAvatars = React.Children.toArray(children).slice(0, max);
+  return (
+    <Stack direction="row" spacing={-1}>
+      {visibleAvatars}
+      {children.length > max && <Avatar>+{children.length - max}</Avatar>}
+    </Stack>
+  );
+}
